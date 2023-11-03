@@ -11,6 +11,7 @@ import SettingScreen from "./screens/setting";
 
 const Tab = createBottomTabNavigator();
 // const Stack = createNativeStackNavigator();
+const noHead = { headerShown: false};
 
 const Tabs = () => {
   return (
@@ -44,6 +45,7 @@ const Tabs = () => {
         tabBarIconStyle: { marginTop: 5 },
         tabBarStyle: {
           height: 70,
+          backgroundColor: '#FEFFC1',
           borderTopWidth: 0,
         },
         tabBarLabel: ({ children, color, focused }) => {
@@ -55,8 +57,8 @@ const Tabs = () => {
         },
       })}>
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Inspiration" component={InspirationScreen} />
-        <Tab.Screen name="Saved" component={SavedScreen} />
+        <Tab.Screen name="Inspiration" component={InspirationScreen} options={noHead}/>
+        <Tab.Screen name="Saved" component={SavedScreen} options={noHead} />
         <Tab.Screen name="Setting" component={SettingScreen} />
       </Tab.Navigator>
     </NavigationContainer>
