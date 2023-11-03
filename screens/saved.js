@@ -36,7 +36,7 @@ const SavedScreen = () => {
   return (
     <NativeBaseProvider>
       <Center marginTop={10}>
-      <Text style={{ fontSize: 30, marginBottom: 16 }}>Saved Items</Text>
+      <Text style={{ fontSize: 30, marginBottom: 16, fontWeight: 'bold', color: '#89580A'}}>Saved Items</Text>
         {savedItems.map((item) => (
           <Box
             key={item.id}
@@ -56,19 +56,19 @@ const SavedScreen = () => {
               <Text fontSize={16} marginBottom={2} fontWeight="bold" color="black">
                 {item.title}
               </Text>
-              <Text fontSize={12} color="gray.500" marginBottom={10}>
+              <Text style={{fontSize:12, color:"#89580A", marginBottom:10}}>
                 {item.descriptions[0]}
               </Text>
-              <Text fontSize={12} color="#ffd700" fontWeight="bold">
+              <Text style={{fontSize: 12, fontWeight:"bold"}}>
                 {item.descriptions[1]}
               </Text>
             </View>
             <Ionicons
+              style={{ marginLeft: 'auto' }}
               name={item.bookmarked ? 'bookmark' : 'bookmark-outline'}
               size={28}
               color={item.bookmarked ? 'black' : 'black'}
               onPress={() => toggleBookmark(item.id)}
-              style={{ marginLeft: 'auto' }}
             />
           </Box>
         ))}
