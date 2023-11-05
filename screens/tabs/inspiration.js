@@ -1,9 +1,9 @@
-// import { useNavigation } from "@react-navigation/native";
 import { useEffect, useState } from "react";
 import { 
   Input, 
   NativeBaseProvider, 
   ScrollView,
+  View,
   Image, 
   Flex, 
   Box, 
@@ -13,10 +13,11 @@ import {
   FlatList,
   Card,
   CardItem,
+  Center,
  } from "native-base";
 import { TouchableOpacity } from "react-native";
 import Categories from "../../components/categories";
-import items from "../../data_dummy/data";
+import inspiration_data from "../../data_dummy/data";
 import ProductItem from "../../components/product-items";
 
 const InspirationScreen = () => {
@@ -26,24 +27,41 @@ const InspirationScreen = () => {
 
   const categoriesHandler = (categoryName) => {
     setActiveCategory(categoryName);
-    const Product = getItems(categoryName);
-    setProducts(Product);
   };
 
   const getItems = (activeCategory) => {
-    const getItems = items.find(item => item.kategori === activeCategory);
+    const getItems = inspiration_data.find(item => item.kategori === activeCategory);
 
     if (getItems) {
-      return getItems.items; 
+      return getItems.inspirasi; 
     } else {
       return null; 
     }
   }
 
+  useEffect (() => {
+    setProducts(getItems(activeCategory))
+  })
   const renderItem = ({ item }) => {
     return <ProductItem item={item} />;
   };
   
-  console.log(Products);
+  console.log(inspiration_data);
+
+  return(
+    <NativeBaseProvider>
+      <ScrollView mx={14} mt={12} scrollIndicatorInsets={false}>
+        <Heading mt={1} textAlign={"center"} fontSize={30} color={"#89580A"}>Inspiration</Heading>
+        <Categories onChange={categoriesHandler}/>
+  
+        <FlatList
+          data={Products}
+          renderItem={ renderItem }
+          keyExtractor={(item) => item.id}
+          numColumns={1} 
+        />
+      </ScrollView>
+    </NativeBaseProvider>
+  )
 }
 export default InspirationScreen;

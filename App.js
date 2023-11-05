@@ -6,7 +6,7 @@ import Tabs from './screens/tabs/_layout';
 const Stack = createNativeStackNavigator();
 const noHead = { headerShown: false };
 
-function MyStack() {
+function StackLayout() {
   return (
     <NavigationContainer>
         <Stack.Navigator>
@@ -16,4 +16,4 @@ function MyStack() {
   );
 }
 
-export default MyStack;
+export default StackLayout;

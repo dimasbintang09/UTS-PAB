@@ -9,19 +9,19 @@ const SavedScreen = () => {
       id: 1,
       title: 'LINMONN',
       descriptions: ['Tables', 'RP. 579.000'],
-      image: require('../../assets/item1.jpg')
+      image: require('../../assets/meja_makan_antik.jpg')
     },
     {
       id: 2,
       title: 'MALM',
       descriptions: ['Drawers', 'RP. 699.000'],
-      image: require('../../assets/item2.jpg')
+      image: require('../../assets/MALM.jpg')
     },
     {
       id: 3,
       title: 'STENSELE',
       descriptions: ['Tables', 'RP. 599.000'],
-      image: require('../../assets/item3.jpg')
+      image: require('../../assets/meja_makan_bundar.jpg')
     },
   ]);
 
