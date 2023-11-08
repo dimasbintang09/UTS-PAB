@@ -4,8 +4,9 @@ import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 
 function DetailScreen({ route }) {
-  const { itemId, itemDetail } = route.params;
+  const { itemId, itemDetail, itemImage } = route.params;
   const navigation = useNavigation();
+  console.log("Isi Detail", route)
 
   const handleGoBack = () => {
     navigation.goBack();
@@ -31,7 +32,7 @@ function DetailScreen({ route }) {
             Inspiration
           </Heading>
         </View>
-        <Image w="100%" h={200} my={5} source={itemId} alt="Selected Image" />
+        <Image w="100%" h={200} my={5} source={itemImage} alt="Selected Image" />
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
           <Text>itemId: {JSON.stringify(itemId)}</Text>
           <Text>params: {JSON.stringify(itemDetail)}</Text>

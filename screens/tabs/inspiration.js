@@ -32,7 +32,7 @@ const InspirationScreen = ({navigation}) => {
 
   const getItems = (activeCategory) => {
     const getItems = inspiration_data.find(item => item.kategori === activeCategory);
-
+  
     if (getItems) {
       return getItems.inspirasi; 
     } else {
@@ -47,7 +47,6 @@ const InspirationScreen = ({navigation}) => {
     return <ProductItem item={item} />;
   };
   
-  console.log(inspiration_data);
 
   return(
     <NativeBaseProvider>

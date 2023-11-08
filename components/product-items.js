@@ -5,6 +5,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const ProductItem = ({ item }) => {
   const navigation= useNavigation ();
+  console.log("Isi image", item.image)
   return (
     <View width={'100%'} m={"auto"} my={-3} p={2} height={'225px'} alignItems={'center'}>
         <TouchableOpacity
@@ -12,7 +13,8 @@ const ProductItem = ({ item }) => {
           /* 1. Navigate to the Details route with params */
           navigation.navigate('Detail', {
             itemId: item.id,
-            itemDetail: item.deskripsi
+            itemDetail: item.deskripsi,
+            itemImage: item.image
           });
         }}
       >
