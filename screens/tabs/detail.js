@@ -1,21 +1,44 @@
+import React from "react";
+import { View, Text, Image, ScrollView, Heading, IconButton } from "native-base";
 import { useNavigation } from "@react-navigation/native";
-import { View, Text, Button, Image, Box, ScrollView } from "native-base";
+import { Ionicons } from "@expo/vector-icons";
 
-function DetailScreen({ route, navigation }) {
-  /* 2. Get the param */
+function DetailScreen({ route }) {
   const { itemId, itemDetail } = route.params;
-  const imageMapping = {
-    itemId1: require('../../assets/item1.jpg'),
-    itemId2: require('../../assets/item2.jpg'),
+  const navigation = useNavigation();
+
+  const handleGoBack = () => {
+    navigation.goBack();
   };
-  const imageSource = imageMapping[itemId];
+
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Text>itemId: {JSON.stringify(itemId)}</Text>
-      <Text>otherParam: {JSON.stringify(itemDetail)}</Text>
-      <Image source={imageSource} style={{ width: 200, height: 200 }} />
-    </View>
+    <>
+      <ScrollView>
+        <View flexDirection="row" alignItems="center" mt={5} ml={3}>
+          <IconButton
+            onPress={handleGoBack}
+            // variant="outline"
+            icon={<Ionicons name="arrow-back" size={25} color="#FFE60D" />}
+            size={10}
+            // color="black"
+            borderRadius="full"
+            // borderWidth={1}
+            backgroundColor="#89580A"
+            p={1}
+            mt={5}
+          />
+          <Heading mt={5} mx={"16"} textAlign="center" fontSize={30} color="#89580A">
+            Inspiration
+          </Heading>
+        </View>
+        <Image w="100%" h={200} my={5} source={itemId} alt="Selected Image" />
+        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+          <Text>itemId: {JSON.stringify(itemId)}</Text>
+          <Text>params: {JSON.stringify(itemDetail)}</Text>
+        </View>
+      </ScrollView>
+    </>
   );
 }
+
 export default DetailScreen;

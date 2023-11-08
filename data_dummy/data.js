@@ -12,7 +12,7 @@ const inspiration_data = [
         {
           id: 3,
           image: require('../assets/item3.jpg'),
-          judul: "Ruang Makan Keluarga Yang Hangat",
+          judul: "Ruang Makan Keluarga Hangat",
           deskripsi: "Buat momen makan bersama keluarga lebih hangat dengan desain ruang makan yang indah.",
           kategori: "Dining Room"
         },
@@ -36,57 +36,92 @@ const inspiration_data = [
             kategori: "Bedroom"
           },
           {
-            id: 2,
+            id: 5,
             image: require('../assets/item6.jpg'),
             judul: "Kamar Tidur Anak Yang Kreatif",
             deskripsi: "Buat kamar tidur anak menjadi tempat kreativitas dengan desain yang ceria.",
             kategori: "Bedroom"
           },
           {
-            id: 3,
-            image: require('../assets/item1.jpg'),
-            judul: "Kamar Tidur Anak Yang Kreatif",
-            deskripsi: "Buat kamar tidur anak menjadi tempat kreativitas dengan desain yang ceria.",
+            id: 6,
+            image: require('../assets/item7.jpg'),
+            judul: "Kamar Tidur Minimalis",
+            deskripsi: "Temukan desain kamar tidur modern yang minimalis dan elegan.",
             kategori: "Bedroom"
-          }
+          },
+          {
+            id: 7,
+            image: require('../assets/item8.jpg'),
+            judul: "Kamar Tidur Aesthetic",
+            deskripsi: "Temukan desain kamar tidur aesthetic yang cozy dan menyenangkan.",
+            kategori: "Bedroom"
+          },
         ]
       },
       {
         kategori: "Dining Room",
         inspirasi: [
           {
-            id: 1,
+            id: 8,
             image: require('../assets/item5.jpg'),
             judul: "Desain Ruang Makan Minimalis",
             deskripsi: "Ciptakan ruang makan minimalis dengan meja dan kursi yang elegan.",
             kategori: "Dining Room"
           },
           {
-            id: 2,
+            id: 9,
             image: require('../assets/item3.jpg'),
             judul: "Ruang Makan Keluarga Hangat",
             deskripsi: "Buat momen makan bersama keluarga menjadi lebih hangat dengan desain yang nyaman.",
             kategori: "Dining Room"
-          }
+          },
+          {
+            id: 10,
+            image: require('../assets/item9.jpg'),
+            judul: "Ruang Makan Keluarga Natural",
+            deskripsi: "Buat momen makan bersama keluarga tersayang dengan desain natural.",
+            kategori: "Dining Room"
+          },
+          {
+            id: 11,
+            image: require('../assets/item10.jpg'),
+            judul: "Ruang Makan Keluarga Mewah",
+            deskripsi: "Temukan desain ruang makan keluarga yang mewah dan nyaman.",
+            kategori: "Dining Room"
+          },
         ]
       },
       {
         kategori: "Family Room",
         inspirasi: [
           {
-            id: 1,
-            image: require('../assets/item1.jpg'),
+            id: 12,
+            image: require('../assets/item11.jpg'),
             judul: "Ruang Keluarga Modern",
             deskripsi: "Buat ruang keluarga menjadi modern dengan furnitur dan dekorasi yang trendi.",
             kategori: "Family Room"
           },
           {
-            id: 2,
-            image: require('../assets/item1.jpg'),
+            id: 13,
+            image: require('../assets/item12.jpg'),
             judul: "Ruang Keluarga Minimalis",
             deskripsi: "Ciptakan ruang keluarga minimalis dengan desain yang sederhana namun elegan.",
             kategori: "Family Room"
-          }
+          },
+          {
+            id: 14,
+            image: require('../assets/item13.jpg'),
+            judul: "Ruang Keluarga Stylish",
+            deskripsi: "Ciptakan ruang keluarga minimalis dengan desain yang sederhana namun elegan.",
+            kategori: "Family Room"
+          },
+          {
+            id: 15,
+            image: require('../assets/item14.jpg'),
+            judul: "Ruang Keluarga American Style",
+            deskripsi: "Ciptakan ruang keluarga minimalis dengan desain yang sederhana namun elegan.",
+            kategori: "Family Room"
+          },
         ]
       }
   ];

@@ -14,7 +14,7 @@ function StackLayout() {
     <NavigationContainer>
         <Stack.Navigator>
             <Stack.Screen name="Tabs" component={Tabs} options={noHead} />
-            <Stack.Screen name="Detail" component={Detail}/>
+            <Stack.Screen name="Detail" component={Detail} options={noHead}/>
         </Stack.Navigator>
     </NavigationContainer>
     </NativeBaseProvider>
