@@ -28,14 +28,14 @@ function DetailScreen({ route }) {
             p={1}
             mt={5}
           />
-          <Heading mt={5} mx={"16"} textAlign="center" fontSize={30} color="#89580A">
+          <Heading mt={5} mx={"20"} textAlign="center" fontSize={30} color="#89580A">
             Inspiration
           </Heading>
         </View>
         <Image w="100%" h={200} my={5} source={itemImage} alt="Selected Image" />
         <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text>itemId: {JSON.stringify(itemId)}</Text>
-          <Text>params: {JSON.stringify(itemDetail)}</Text>
+          {/* <Text>itemId: {JSON.stringify(itemId)}</Text> */}
+          <Text fontSize={"20"} textAlign={'left'}> {JSON.stringify(itemDetail)}</Text>
         </View>
       </ScrollView>
     </>
