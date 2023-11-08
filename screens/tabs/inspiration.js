@@ -14,14 +14,15 @@ import {
   Card,
   CardItem,
   Center,
+  VStack
  } from "native-base";
 import { TouchableOpacity } from "react-native";
 import Categories from "../../components/categories";
 import inspiration_data from "../../data_dummy/data";
 import ProductItem from "../../components/product-items";
 
-const InspirationScreen = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
+const InspirationScreen = ({navigation}) => {
+  const [activeCategory, setActiveCategory] = useState("All");
   const [Products, setProducts] = useState([]);
   // const navigation = useNavigation();
 
@@ -54,12 +55,17 @@ const InspirationScreen = () => {
         <Heading mt={1} textAlign={"center"} fontSize={30} color={"#89580A"}>Inspiration</Heading>
         <Categories onChange={categoriesHandler}/>
   
-        <FlatList
+        {/* <FlatList
           data={Products}
           renderItem={ renderItem }
           keyExtractor={(item) => item.id}
           numColumns={1} 
-        />
+        /> */}
+        <VStack>
+        {Products.map((item) => {
+          return <ProductItem item={item} key={item.id} />;
+        })}
+      </VStack>
       </ScrollView>
     </NativeBaseProvider>
   )
